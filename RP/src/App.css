@@ -1,0 +1,118 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+/* .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.box {
+  height: 5rem;
+  width: 5em;
+}
+
+.box.visible {
+  border: 3px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.box.hidden {
+  opacity: 0;
+  cursor: initial;
+}
+
+.box.selected {
+  background-color: green;
+} */
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    border: 0;
+    outline: none;
+    color: white;
+    background-color: #2c3e50;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.container button:active {
+  transform: scale(0.9);
+}
+
+.chartContainer {
+  position: relative;
+  height: 500px;
+  width: 80%;
+  padding: 10px;
+}
+
+.bar--container {
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  border-top-width: 0;
+  border-right-width: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.y-axis {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  font-weight: bold;
+  margin-left: -10px;
+}
+
+.x-axis {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.bar {
+  flex: 1;
+  position: relative;
+}
+
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -120%);
+  width: max-content;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bar:hover .tooltip {
+  opacity: 1;
+}
